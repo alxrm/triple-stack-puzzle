@@ -1,19 +1,34 @@
 {
   "name": "triple-stack-puzzle",
+  "homepage": "https://alxrm.github.io/triple-stack-puzzle",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "lodash.assign": "^4.2.0",
+    "lodash.every": "^4.6.0",
+    "lodash.fill": "^3.4.0",
+    "lodash.filter": "^4.6.0",
+    "lodash.find": "^4.6.0",
+    "lodash.findindex": "^4.6.0",
+    "lodash.foreach": "^4.5.0",
+    "lodash.map": "^4.6.0",
+    "lodash.random": "^3.2.0",
+    "lodash.shuffle": "^4.2.0",
     "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react-dom": "^16.9.0",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-scripts": "3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
