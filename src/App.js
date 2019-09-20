@@ -20,7 +20,7 @@ const Menu = styled.div`
   padding: 2vh 0;
   display: flex;
   align-items: center;
-  font-size: 1.4em;
+  font-size: 3.5vh;
   justify-content: space-between;
 `
 
@@ -30,7 +30,7 @@ const Button = styled.span`
   transition: box-shadow 0.2s ease-in-out;
   border-radius: 4px;
   padding: 4px;
-  font-size: 0.85em;
+  font-size: 2.5vh;
   box-shadow: 0 0 0 0.1vh white;
   
   :hover {
