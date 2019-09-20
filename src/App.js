@@ -2,9 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Plane, {Row} from './Plane'
 
-import map from 'lodash.map'
 import {puzzle} from './util/TripleStackPuzzle'
-import Cell, {EmptyCell} from "./Cell";
+import Cell, {EmptyCell} from './Cell';
 
 const AppContainer = styled.div`
   width: 150vh;
@@ -93,7 +92,7 @@ class App extends React.Component {
 
   render() {
     const { selectedCell, plane } = this.state
-    const [groupA, groupB, groupC] = map(puzzle.groupOrder, it => it)
+    const [groupA, groupB, groupC] = Object.values(puzzle.groupOrder)
 
     return (
       <AppContainer>
@@ -111,8 +110,8 @@ class App extends React.Component {
             onSelect={this.handleCellSelection}
           />
           <Menu>
-            <Button onClick={() => this.restart()}>Restart</Button>
-            <span>{puzzle.isSolved() ? "Ебать ты красава" : "3 stacks, the game"}</span>
+            <Button onClick={() => this.restart()}>{puzzle.isSolved() ? 'Again?' : 'Restart'}</Button>
+            <span>{puzzle.isSolved() ? 'Solved!' : '3 stacks, the game'}</span>
           </Menu>
         </div>
       </AppContainer>

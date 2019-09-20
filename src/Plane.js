@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import Cell from "./Cell";
+import Cell from './Cell';
 
 const PlaneContainer = styled.div`
   width: 60vh;

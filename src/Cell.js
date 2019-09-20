@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled, {css} from 'styled-components';
-import {COLORS_BY_TYPE} from "./util/cells";
+import {COLORS_BY_TYPE} from './util/cells';
 
 const CellSquare = styled.div`
   width: 10vh;

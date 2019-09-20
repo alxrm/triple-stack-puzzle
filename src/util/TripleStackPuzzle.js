@@ -1,12 +1,12 @@
-import fill from "lodash.fill"
-import map from "lodash.map"
-import find from "lodash.find"
-import forEach from "lodash.foreach"
-import shuffle from "lodash.shuffle"
-import every from "lodash.every"
-import assign from "lodash.assign"
-import random from "lodash.random"
-import findIndex from "lodash.findindex"
+import fill from 'lodash.fill'
+import map from 'lodash.map'
+import find from 'lodash.find'
+import forEach from 'lodash.foreach'
+import shuffle from 'lodash.shuffle'
+import every from 'lodash.every'
+import assign from 'lodash.assign'
+import random from 'lodash.random'
+import findIndex from 'lodash.findindex'
 
 export default class TripleStackPuzzle {
 
