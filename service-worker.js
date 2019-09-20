@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/triple-stack-puzzle/precache-manifest.f93e9095def95f1e4cfe82a28b65d391.js"
+  "/triple-stack-puzzle/precache-manifest.5f44e909a8c323af50a30179c18445a0.js"
 );
 
 self.addEventListener('message', (event) => {
