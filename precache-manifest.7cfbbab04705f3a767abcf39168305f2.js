@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f7832fc1e3d5e8b714d4b9709470eb01",
+    "revision": "04dbc98fe6ead1251aea483e315474d8",
     "url": "/triple-stack-puzzle/index.html"
   },
   {
-    "revision": "ebe76cd77f4cf30760f1",
+    "revision": "d51788b46326d4e77c14",
     "url": "/triple-stack-puzzle/static/css/main.d4d8e6c2.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/triple-stack-puzzle/static/js/2.217dab8b.chunk.js"
   },
   {
-    "revision": "ebe76cd77f4cf30760f1",
-    "url": "/triple-stack-puzzle/static/js/main.b53a5e45.chunk.js"
+    "revision": "d51788b46326d4e77c14",
+    "url": "/triple-stack-puzzle/static/js/main.ff895398.chunk.js"
   },
   {
     "revision": "6e71d92d00f7b5d0225f",
