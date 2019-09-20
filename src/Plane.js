@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import Cell from './Cell';
+import React from 'react'
+import styled from 'styled-components'
+import Cell from './Cell'
 
 const PlaneContainer = styled.div`
   width: 60vh;
@@ -29,7 +29,8 @@ export default ({ plane, selectedCell = [], onSelect }) => (
             row={rowIndex}
             column={colIndex}
             selected={selectedCell[0] === rowIndex && selectedCell[1] === colIndex}
-            onSelect={onSelect} />
+            onSelect={onSelect}
+          />
         ))}
       </Row>
     ))}

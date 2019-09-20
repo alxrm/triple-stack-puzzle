@@ -1,6 +1,6 @@
-import React from 'react';
-import styled, {css} from 'styled-components';
-import {COLORS_BY_TYPE} from './util/cells';
+import React from 'react'
+import styled, {css} from 'styled-components'
+import {COLORS_BY_TYPE} from './util/cells'
 
 const CellSquare = styled.div`
   width: 10vh;
@@ -57,7 +57,7 @@ export const EmptyCell = styled.div`
 `
 
 export default ({ selected, locked, data, row, column, onSelect }) => {
-  const select = !locked ? (() => onSelect(row, column, data)) : null;
+  const select = !locked ? (() => onSelect(row, column, data)) : null
 
   return (
     <CellSquare

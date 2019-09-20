@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Plane, {Row} from './Plane'
 
 import {puzzle} from './util/TripleStackPuzzle'
-import Cell, {EmptyCell} from './Cell';
+import Cell, {EmptyCell} from './Cell'
 
 const AppContainer = styled.div`
   width: 150vh;
@@ -30,6 +30,7 @@ const Button = styled.span`
   transition: box-shadow 0.2s ease-in-out;
   border-radius: 4px;
   padding: 4px;
+  font-size: 0.85em;
   box-shadow: 0 0 0 0.1vh white;
   
   :hover {
@@ -46,9 +47,9 @@ class App extends React.Component {
       selectedCell: []
     }
 
-    this.move = this.move.bind(this);
-    this.restart = this.restart.bind(this);
-    this.handleCellSelection = this.handleCellSelection.bind(this);
+    this.move = this.move.bind(this)
+    this.restart = this.restart.bind(this)
+    this.handleCellSelection = this.handleCellSelection.bind(this)
   }
 
   move(toRow, toCol) {
@@ -68,7 +69,7 @@ class App extends React.Component {
 
   handleCellSelection(row, col, data) {
     const { selectedCell } = this.state
-    const [fromRow, fromCol] = selectedCell;
+    const [fromRow, fromCol] = selectedCell
 
     if (data === 0 && !selectedCell) {
       return
