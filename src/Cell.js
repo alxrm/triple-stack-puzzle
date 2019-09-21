@@ -2,6 +2,7 @@ import React from 'react'
 import styled, {css} from 'styled-components'
 import {Swipeable} from 'react-swipeable'
 import {COLORS_BY_TYPE} from './constants/Cells'
+import {isBrowser} from 'react-device-detect'
 
 const CellSquare = styled(Swipeable)`
   width: 10vh;
@@ -11,7 +12,11 @@ const CellSquare = styled(Swipeable)`
   border-radius: 4px;
   box-shadow: 0 0 0 0.5vh transparent;
   
-   ${props => !props.locked && css`
+  ${props => props.selected && css`
+    box-shadow: 0 0 0 0.5vh #cfcfcf;
+  `}
+   
+   ${props => !props.locked && isBrowser && css`
      cursor: pointer;
 
      :hover {
@@ -53,7 +58,7 @@ export const EmptyCell = styled.div`
   height: 10vh;
 `
 
-export default ({ locked, data, row, column, onCellSwiped }) => {
+export default ({ selected = false, locked, data, row, column, onCellSwiped }) => {
   const swipe = data > 0 && !locked ? ({ dir }) => onCellSwiped(dir, row, column, data) : null
 
   return (
@@ -61,6 +66,7 @@ export default ({ locked, data, row, column, onCellSwiped }) => {
       color={COLORS_BY_TYPE[data]}
       locked={locked || data === -1}
       onSwiped={swipe}
+      selected={selected}
       trackMouse
       preventDefaultTouchmoveEvent
     >
