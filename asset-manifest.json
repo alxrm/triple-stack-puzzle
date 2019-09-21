@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/triple-stack-puzzle/static/css/main.85c8d631.chunk.css",
+    "main.css": "/triple-stack-puzzle/static/css/main.c2cf8735.chunk.css",
     "main.js": "/triple-stack-puzzle/static/js/main.d7259f62.chunk.js",
     "main.js.map": "/triple-stack-puzzle/static/js/main.d7259f62.chunk.js.map",
     "runtime~main.js": "/triple-stack-puzzle/static/js/runtime~main.4640c90b.js",
@@ -8,8 +8,8 @@
     "static/js/2.ef686265.chunk.js": "/triple-stack-puzzle/static/js/2.ef686265.chunk.js",
     "static/js/2.ef686265.chunk.js.map": "/triple-stack-puzzle/static/js/2.ef686265.chunk.js.map",
     "index.html": "/triple-stack-puzzle/index.html",
-    "precache-manifest.51fb59b1871f6a5a26c7ded58e5ad352.js": "/triple-stack-puzzle/precache-manifest.51fb59b1871f6a5a26c7ded58e5ad352.js",
+    "precache-manifest.de080945dc6c271c28bdf08fe73d9969.js": "/triple-stack-puzzle/precache-manifest.de080945dc6c271c28bdf08fe73d9969.js",
     "service-worker.js": "/triple-stack-puzzle/service-worker.js",
-    "static/css/main.85c8d631.chunk.css.map": "/triple-stack-puzzle/static/css/main.85c8d631.chunk.css.map"
+    "static/css/main.c2cf8735.chunk.css.map": "/triple-stack-puzzle/static/css/main.c2cf8735.chunk.css.map"
   }
 }
