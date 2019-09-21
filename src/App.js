@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Plane, {Row} from './Plane'
-
-import {puzzle} from './util/TripleStackPuzzle'
 import Cell, {EmptyCell} from './Cell'
+
+import directions from './constants/Swipes'
+import {puzzle} from './util/TripleStackPuzzle'
 
 const AppContainer = styled.div`
   width: 150vh;
@@ -43,56 +44,45 @@ class App extends React.Component {
     super(props)
 
     this.state = {
-      plane: puzzle.plane,
-      selectedCell: []
+      plane: puzzle.plane
     }
 
-    this.move = this.move.bind(this)
     this.restart = this.restart.bind(this)
-    this.handleCellSelection = this.handleCellSelection.bind(this)
-  }
-
-  move(toRow, toCol) {
-    const [fromRow, fromCol] = this.state.selectedCell
-
-    puzzle.move(fromRow, fromCol, toRow, toCol)
-    this.setState({ ...this.state, plane: puzzle.plane })
+    this.handleCellSwipe = this.handleCellSwipe.bind(this)
   }
 
   restart() {
     puzzle.createNew()
     this.setState({
-      plane: puzzle.plane,
-      selectedCell: []
+      plane: puzzle.plane
     })
   }
 
-  handleCellSelection(row, col, data) {
-    const { selectedCell } = this.state
-    const [fromRow, fromCol] = selectedCell
+  handleCellSwipe(dir, row, col) {
+    const { left, up, right, down } = directions
 
-    if (data === 0 && !selectedCell) {
-      return
+    switch (dir) {
+      case left:
+        puzzle.move(row, col, row, col - 1)
+        break
+      case up:
+        puzzle.move(row, col, row - 1, col)
+        break
+      case right:
+        puzzle.move(row, col, row, col + 1)
+        break
+      case down:
+        puzzle.move(row, col, row + 1, col)
+        break
+      default:
+        console.log(dir, 'did nothing') // exhaust
     }
 
-    if (fromRow === row && fromCol === col) {
-      this.setState({ ...this.state, selectedCell: [] })
-      return
-    }
-
-    if (data > 0) {
-      this.setState({ ...this.state, selectedCell: [row, col] })
-      return
-    }
-
-    if (data === 0 && selectedCell && puzzle.canMove(fromRow, fromCol, row, col)) {
-      puzzle.move(fromRow, fromCol, row, col)
-      this.setState({ plane: puzzle.plane, selectedCell: [] })
-    }
+    this.setState({ plane: puzzle.plane })
   }
 
   render() {
-    const { selectedCell, plane } = this.state
+    const { plane } = this.state
     const [groupA, groupB, groupC] = Object.values(puzzle.groupOrder)
 
     return (
@@ -107,8 +97,7 @@ class App extends React.Component {
           </Row>
           <Plane
             plane={plane}
-            selectedCell={selectedCell}
-            onSelect={this.handleCellSelection}
+            onCellSwiped={this.handleCellSwipe}
           />
           <Menu>
             <Button onClick={() => this.restart()}>{puzzle.isSolved() ? 'Again?' : 'Restart'}</Button>

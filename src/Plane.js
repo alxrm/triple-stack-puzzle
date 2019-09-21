@@ -18,7 +18,7 @@ export const Row = styled.div`
   justify-content: space-evenly;
 `
 
-export default ({ plane, selectedCell = [], onSelect }) => (
+export default ({ plane, ...rest }) => (
   <PlaneContainer>
     {plane.map((row, rowIndex) => (
       <Row key={rowIndex}>
@@ -28,8 +28,7 @@ export default ({ plane, selectedCell = [], onSelect }) => (
             data={cell}
             row={rowIndex}
             column={colIndex}
-            selected={selectedCell[0] === rowIndex && selectedCell[1] === colIndex}
-            onSelect={onSelect}
+            {...rest}
           />
         ))}
       </Row>

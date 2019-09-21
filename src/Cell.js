@@ -1,8 +1,9 @@
 import React from 'react'
 import styled, {css} from 'styled-components'
-import {COLORS_BY_TYPE} from './util/cells'
+import {Swipeable} from 'react-swipeable'
+import {COLORS_BY_TYPE} from './constants/Cells'
 
-const CellSquare = styled.div`
+const CellSquare = styled(Swipeable)`
   width: 10vh;
   height: 10vh;
   background-color: ${({ color = '#383b41' }) => color};
@@ -10,10 +11,6 @@ const CellSquare = styled.div`
   border-radius: 4px;
   box-shadow: 0 0 0 0.5vh transparent;
   
-   ${props => props.selected && css`
-     box-shadow: 0 0 0 0.5vh #cfcfcf;
-  `}
-   
    ${props => !props.locked && css`
      cursor: pointer;
 
@@ -56,15 +53,16 @@ export const EmptyCell = styled.div`
   height: 10vh;
 `
 
-export default ({ selected, locked, data, row, column, onSelect }) => {
-  const select = !locked ? (() => onSelect(row, column, data)) : null
+export default ({ locked, data, row, column, onCellSwiped }) => {
+  const swipe = data > 0 && !locked ? ({ dir }) => onCellSwiped(dir, row, column, data) : null
 
   return (
     <CellSquare
       color={COLORS_BY_TYPE[data]}
       locked={locked || data === -1}
-      selected={selected}
-      onClick={select}
+      onSwiped={swipe}
+      trackMouse
+      preventDefaultTouchmoveEvent
     >
       {(data === -1) ? <Cross /> : <span />}
     </CellSquare>
