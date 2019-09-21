@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/triple-stack-puzzle/static/css/main.d4d8e6c2.chunk.css",
-    "main.js": "/triple-stack-puzzle/static/js/main.48035369.chunk.js",
-    "main.js.map": "/triple-stack-puzzle/static/js/main.48035369.chunk.js.map",
+    "main.js": "/triple-stack-puzzle/static/js/main.0546f33e.chunk.js",
+    "main.js.map": "/triple-stack-puzzle/static/js/main.0546f33e.chunk.js.map",
     "runtime~main.js": "/triple-stack-puzzle/static/js/runtime~main.4640c90b.js",
     "runtime~main.js.map": "/triple-stack-puzzle/static/js/runtime~main.4640c90b.js.map",
-    "static/js/2.5a7203e3.chunk.js": "/triple-stack-puzzle/static/js/2.5a7203e3.chunk.js",
-    "static/js/2.5a7203e3.chunk.js.map": "/triple-stack-puzzle/static/js/2.5a7203e3.chunk.js.map",
+    "static/js/2.cd20799a.chunk.js": "/triple-stack-puzzle/static/js/2.cd20799a.chunk.js",
+    "static/js/2.cd20799a.chunk.js.map": "/triple-stack-puzzle/static/js/2.cd20799a.chunk.js.map",
     "index.html": "/triple-stack-puzzle/index.html",
-    "precache-manifest.5f44e909a8c323af50a30179c18445a0.js": "/triple-stack-puzzle/precache-manifest.5f44e909a8c323af50a30179c18445a0.js",
+    "precache-manifest.ff2f181ea3a76b68a4f4f2f4e67cb32f.js": "/triple-stack-puzzle/precache-manifest.ff2f181ea3a76b68a4f4f2f4e67cb32f.js",
     "service-worker.js": "/triple-stack-puzzle/service-worker.js",
     "static/css/main.d4d8e6c2.chunk.css.map": "/triple-stack-puzzle/static/css/main.d4d8e6c2.chunk.css.map"
   }
